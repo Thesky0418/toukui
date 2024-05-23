@@ -25,12 +25,14 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "dht11.h"
+#include "u8g2.h"
+#include "my_u8g2_config.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+uint8_t temp,humi,tempp,humii;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -92,13 +94,23 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	DHT11_Init();
+	u8g2_t u8g2;
+	u8g2Init(&u8g2);  
+	HAL_UART_Transmit(&huart1,"11111",5,1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+		DHT11_Read_Data(&temp,&humi,&tempp,&humii);
+		u8g2_FirstPage(&u8g2);
+    do
+    {
+      u8g2_test_1(&u8g2);
+    } while (u8g2_NextPage(&u8g2));
+		HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
