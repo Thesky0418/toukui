@@ -8,14 +8,22 @@ toukui\dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 toukui\dma.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 toukui\dma.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 toukui\dma.o: ../Drivers/CMSIS/Include/core_cm3.h
+<<<<<<< HEAD
+toukui\dma.o: G:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+=======
 toukui\dma.o: D:\32\ARM\ARMCC\Bin\..\include\stdint.h
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 toukui\dma.o: ../Drivers/CMSIS/Include/cmsis_version.h
 toukui\dma.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 toukui\dma.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 toukui\dma.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 toukui\dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 toukui\dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+<<<<<<< HEAD
+toukui\dma.o: G:\MDK\ARM\ARMCC\Bin\..\include\stddef.h
+=======
 toukui\dma.o: D:\32\ARM\ARMCC\Bin\..\include\stddef.h
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 toukui\dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 toukui\dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 toukui\dma.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

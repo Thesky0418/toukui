@@ -214,9 +214,15 @@ ARM Macro Assembler    Page 4
 ]
   130 00000000                 IMPORT           __main
   131 00000000                 IMPORT           SystemInit
+<<<<<<< HEAD
+  132 00000000 4806            LDR              R0, =SystemInit
+  133 00000002 4780            BLX              R0
+  134 00000004 4806            LDR              R0, =__main
+=======
   132 00000000 4809            LDR              R0, =SystemInit
   133 00000002 4780            BLX              R0
   134 00000004 4809            LDR              R0, =__main
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
   135 00000006 4700            BX               R0
   136 00000008                 ENDP
   137 00000008         
@@ -442,6 +448,19 @@ ARM Macro Assembler    Page 7
   280 0000001C         ;*******************************************************
                        ************************
   281 0000001C                 IF               :DEF:__MICROLIB
+<<<<<<< HEAD
+  282 0000001C         
+  283 0000001C                 EXPORT           __initial_sp
+  284 0000001C                 EXPORT           __heap_base
+  285 0000001C                 EXPORT           __heap_limit
+  286 0000001C         
+  287 0000001C                 ELSE
+  302                          ENDIF
+  303 0000001C         
+  304 0000001C                 END
+              00000000 
+              00000000 
+=======
   288 0000001C         
   289 0000001C                 IMPORT           __use_two_region_memory
   290 0000001C                 EXPORT           __user_initial_stackheap
@@ -453,12 +472,21 @@ ARM Macro Assembler    Page 7
   296 00000020 4A05            LDR              R2, = (Heap_Mem +  Heap_Size)
   297 00000022 4B06            LDR              R3, = Stack_Mem
   298 00000024 4770            BX               LR
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 
 
 
 ARM Macro Assembler    Page 8 
 
 
+<<<<<<< HEAD
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=toukui\startup_stm32f103xb.d -otoukui\startup_stm32f103xb.o -I.\RT
+E\_toukui -IG:\MDK\ARM\CMSIS\5.8.0\CMSIS\Core\Include -IG:\MDK\Keil\STM32F1xx_D
+FP\2.4.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_
+VERSION SETA 536" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" 
+--predefine="_RTE_ SETA 1" --list=startup_stm32f103xb.lst startup_stm32f103xb.s
+=======
   299 00000026         
   300 00000026 00 00           ALIGN
   301 00000028         
@@ -477,6 +505,7 @@ E\_toukui -ID:\32\ARM\CMSIS\6.1.0\CMSIS\Core\Include -ID:\32\Keil\STM32F1xx_DFP
 \2.4.1\Device\Include --predefine="__UVISION_VERSION SETA 536" --predefine="_RT
 E_ SETA 1" --predefine="STM32F10X_MD SETA 1" --predefine="_RTE_ SETA 1" --list=
 startup_stm32f103xb.lst startup_stm32f103xb.s
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 
 
 
@@ -497,9 +526,14 @@ Symbol: Stack_Mem
    Definitions
       At line 35 in file startup_stm32f103xb.s
    Uses
+<<<<<<< HEAD
+      None
+Comment: Stack_Mem unused
+=======
       At line 295 in file startup_stm32f103xb.s
       At line 297 in file startup_stm32f103xb.s
 
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 __initial_sp 00000400
 
 Symbol: __initial_sp
@@ -507,7 +541,12 @@ Symbol: __initial_sp
       At line 36 in file startup_stm32f103xb.s
    Uses
       At line 60 in file startup_stm32f103xb.s
+<<<<<<< HEAD
+      At line 283 in file startup_stm32f103xb.s
+
+=======
 Comment: __initial_sp used once
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 3 symbols
 
 
@@ -529,25 +568,40 @@ Symbol: Heap_Mem
    Definitions
       At line 47 in file startup_stm32f103xb.s
    Uses
+<<<<<<< HEAD
+      None
+Comment: Heap_Mem unused
+=======
       At line 294 in file startup_stm32f103xb.s
       At line 296 in file startup_stm32f103xb.s
 
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 __heap_base 00000000
 
 Symbol: __heap_base
    Definitions
       At line 46 in file startup_stm32f103xb.s
    Uses
+<<<<<<< HEAD
+      At line 284 in file startup_stm32f103xb.s
+Comment: __heap_base used once
+=======
       None
 Comment: __heap_base unused
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 __heap_limit 00000200
 
 Symbol: __heap_limit
    Definitions
       At line 48 in file startup_stm32f103xb.s
    Uses
+<<<<<<< HEAD
+      At line 285 in file startup_stm32f103xb.s
+Comment: __heap_limit used once
+=======
       None
 Comment: __heap_limit unused
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 4 symbols
 
 
@@ -1129,6 +1183,9 @@ Symbol: WWDG_IRQHandler
       At line 78 in file startup_stm32f103xb.s
       At line 184 in file startup_stm32f103xb.s
 
+<<<<<<< HEAD
+55 symbols
+=======
 __user_initial_stackheap 0000001C
 
 Symbol: __user_initial_stackheap
@@ -1138,6 +1195,7 @@ Symbol: __user_initial_stackheap
       At line 290 in file startup_stm32f103xb.s
 Comment: __user_initial_stackheap used once
 56 symbols
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 
 
 
@@ -1151,8 +1209,12 @@ Symbol: Heap_Size
       At line 43 in file startup_stm32f103xb.s
    Uses
       At line 47 in file startup_stm32f103xb.s
+<<<<<<< HEAD
+Comment: Heap_Size used once
+=======
       At line 296 in file startup_stm32f103xb.s
 
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 Stack_Size 00000400
 
 Symbol: Stack_Size
@@ -1160,8 +1222,12 @@ Symbol: Stack_Size
       At line 32 in file startup_stm32f103xb.s
    Uses
       At line 35 in file startup_stm32f103xb.s
+<<<<<<< HEAD
+Comment: Stack_Size used once
+=======
       At line 295 in file startup_stm32f103xb.s
 
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
 __Vectors_Size 000000EC
 
 Symbol: __Vectors_Size
@@ -1193,6 +1259,10 @@ Symbol: __main
    Uses
       At line 134 in file startup_stm32f103xb.s
 Comment: __main used once
+<<<<<<< HEAD
+2 symbols
+406 symbols in table
+=======
 __use_two_region_memory 00000000
 
 Symbol: __use_two_region_memory
@@ -1203,3 +1273,4 @@ Symbol: __use_two_region_memory
 Comment: __use_two_region_memory unused
 3 symbols
 409 symbols in table
+>>>>>>> 392afe30b292b2a84836b41502fb66413d22b9de
